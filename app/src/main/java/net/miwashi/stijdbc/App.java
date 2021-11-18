@@ -18,7 +18,7 @@ public class App {
         Connection con = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stidb", "sti", "sti");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "sti", "sti");
             ResultSet rs = con.createStatement().executeQuery("Show tables");
             while(rs.next()) {
                 System.out.print(rs.getString(1));
